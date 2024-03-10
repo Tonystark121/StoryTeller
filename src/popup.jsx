@@ -19,9 +19,9 @@ function Popup({handleShare, value, onChildValue}) {
     toast.success("Link Copied!");
     setIsCopied(true);
   };
-  console.log(value)
+//   console.log(value)
   const handlePath = () => {
-     console.log(location.pathname)
+    //  console.log(location.pathname)
      const path = location.pathname.slice(1)
      navigate(`/${value}`)
      onChildValue(value)

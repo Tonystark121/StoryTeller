@@ -408,6 +408,7 @@ export default function Story() {
   }
 
   useEffect(() => {
+    // console.log('i am here too')
     if (selectedValue) {
       onValue(
         ref(database, `List/${selectedValue.toUpperCase()}`),
@@ -423,6 +424,7 @@ export default function Story() {
   }, [selectedValue]);
 
   useEffect(() => {
+    // console.log('i am here')
     if (check) {
       onValue(
         ref(database, `List/${check.toUpperCase()}`),
@@ -812,7 +814,7 @@ export default function Story() {
                 </div>
               )}
 
-              {( !menu || search.length === 0) && (
+              {!selectedValue && ( !menu || search.length === 0) && (
                 <div className="container">
                   <section className="item-section-main">
                     <div className="item-section-container">
@@ -822,7 +824,7 @@ export default function Story() {
                 </div>
               )}
 
-              { search.length > 0 && menu && (
+              { !selectedValue &&  search.length > 0 && menu && (
                 <div className="container">
                   <section className="item-section-main">
                     <div className="item-section-container">
